@@ -7,14 +7,24 @@
 </head>
 <body>
   <h1>Team Picker</h1>
-  <!-- 팀 배정 버튼 -->
-  <button id="assign-btn">Assign Team</button>
-  <button id="refresh-btn">Refresh Team</button>
-  <h2>Teams</h2>
-  <!-- 팀 배정 결과를 표시할 부분 -->
-  <div id="results"></div>
+  
+  <!-- 사용자 인증 폼 -->
+  <div id="auth-form">
+    <h2>본인 확인</h2>
+    <input type="text" id="name" placeholder="이름" required>
+    <input type="text" id="student-id" placeholder="학번" required>
+    <input type="text" id="phone-last4" placeholder="전화번호 뒤 4자리" required>
+    <button id="verify-btn">확인</button>
+  </div>
 
-  <!-- JavaScript 파일을 연결 -->
+  <!-- 팀 배정 섹션 (처음에는 숨김) -->
+  <div id="team-section" style="display: none;">
+    <button id="assign-btn">Assign Team</button>
+    <button id="refresh-btn" style="display: none;">Refresh Team</button>
+    <h2>Teams</h2>
+    <div id="results"></div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
